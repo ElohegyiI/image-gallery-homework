@@ -1,0 +1,193 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    box-sizing: border-box;
+    background: transparent;
+    font-family: inherit;
+  }
+  a{
+    text-decoration: none;
+  }
+  a img {
+    border: none;
+  }
+  
+  button,
+  a {
+    cursor: pointer;
+    color: inherit;
+  }
+  
+  textarea {
+    resize: none;
+  }
+  
+  button,
+  textarea,
+  select {
+    appearance: none !important;
+    border-radius: 0;
+  }
+
+  /* css reset */
+
+  body {
+    background-color: #f2f2f2;
+  }
+
+  section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+           
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    box-sizing: border-box;
+    background: transparent;
+    font-family: inherit;
+  }
+  a{
+    text-decoration: none;
+  }
+  a img {
+    border: none;
+  }
+  
+  button,
+  a {
+    cursor: pointer;
+    color: inherit;
+  }
+  
+  textarea {
+    resize: none;
+  }
+  
+  button,
+  textarea,
+  select {
+    appearance: none !important;
+    border-radius: 0;
+  }
+
+  /* css reset */
+
+  body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: #FFD97D;
+  }
+
+  section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+           
+  }
+
+  #form h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    text-shadow: 1px 3px #FF9B85;
+    letter-spacing: 0.2rem;
+  }
+
+  #form input[type="text"] {
+    font-weight: 300;
+    font-size: 20px;
+    max-width: 400px;
+    width: 100%;
+    height: 64px;
+    background-color: #FF9B85;
+    padding-left: 20px;
+    margin-bottom: 20px;
+    box-shadow: 5px 10px #888888;
+  }
+
+
+  #form input[type="url"] {
+    font-weight: 300;
+    font-size: 16px;
+    max-width: 400px;
+    width: 100%;
+    height: 64px;
+    background-color: #FF9B85;
+    padding-left: 20px;
+    margin-bottom: 20px;
+    box-shadow: 5px 10px #888888;
+  }
+
+  #form .button-class {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+  }
+
+  #form button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    font-size: 15px;
+    font-weight: bold;
+    width: 100px;
+    height: 50px;
+    letter-spacing: 0.2rem;    
+    text-transform: uppercase;    
+    margin-top: 30px;
+    text-shadow: 1px 3px #FF9B85;
+  }
+  
+  #form button:active {
+    background-color: #FF9B85;
+    transform: translateY(4px);
+  }
+
+  input[type='file'] {
+    align-items: center;
+    font-size: 15px;
+  }
+
+  input[type=file]::file-selector-button {
+    font-size: 15px;
+    background-color: #FF9B85;
+    border: solid 1px #FF9B85;
+    
+  }
+  
+  input[type=file]::file-selector-button:hover {
+    background-color: #888888;
+    
+  }
+  
+  .datepick {
+    display: flex;
+    box-sizing: border-box;
+    width: 9rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 15px;
+    display: inline;
+    padding-left: 1rem;
+    align-items: center;
+   }
+
+    .datepick label {
+        font-size: 15px;
+    }
+   
