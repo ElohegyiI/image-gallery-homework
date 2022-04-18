@@ -24,7 +24,7 @@ const swiperSlideComponent = ({title, image_name}) => {
     return `
         <div class="swiper-slide">
             <h2>Title: ${title}</h2>
-            <img src="/public/img/${image_name}">
+            <img src="upload/${image_name}">
         </div>
     `;
 
