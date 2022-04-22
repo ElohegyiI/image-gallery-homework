@@ -32,6 +32,27 @@ app.get('/images-input', (request, response, next) => {
     response.sendFile(path.join(`${__dirname}/../frontend/index-input.html`))
 })
 
+app.delete('/', (request, response, next) => {
+    
+    const title = request.body.title;
+
+    const deleteImages = jsonData.filter(d => d.title == title)
+    console.log('images',deleteImages.image_name )
+    
+    jsonData = jsonData.filter(d => d.title != title)
+    
+    fs.rm(`${dataLocation}data.json`, /*JSON.stringify(jsonData),*/ (error) => {
+
+        if (error) {
+
+            console.log(error);
+
+        }
+    })
+
+})
+
+
 app.use(fileUpload());
 
 app.use("/upload", express.static(`${__dirname}/../frontend/upload`));

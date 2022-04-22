@@ -4,7 +4,7 @@ function loadEvent() {
         <section>
             <form action="" id='form' method='POST'>
                 <h1>Upload/Delete image</h1>
-                <input type="text" name="title"     placeholder="Title..."  required><br>
+                <input type="text" id="toDeleteTitle" name="title"     placeholder="Title..."  required><br>
                 <input type="text" name="photographername"  placeholder="Photographer's name..." required><br>
                 <input type="url" name="url" placeholder="https://example.com"
                 pattern="https://.*" size="30"
@@ -19,7 +19,7 @@ function loadEvent() {
                 </div>
                 <div class="button-class">
                 <button type="submit" id="button">Upload</button>
-                <button type="reset" value="reset">Delete</button>	
+                <button type="torol" id="torol">Delete</button>	
                 </div>
             </form>
         </section>
@@ -30,6 +30,7 @@ function loadEvent() {
     
     rootElement.insertAdjacentHTML('beforeend', htmlForm);
     
+    const torolElement = document.getElementById('torol');
     const formElement = document.getElementById('form');
 
         formElement.addEventListener('submit', e => {
@@ -76,7 +77,40 @@ function loadEvent() {
 
         });
         
+        torolElement.addEventListener('click', e => {
 
+            e.preventDefault();
+        
+            const formData = {title: document.getElementById('toDeleteTitle').value};
+            
+            const fetchSettings = {
+        
+                method: 'DELETE',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            }
+        
+            fetch('/', fetchSettings)
+                .then(async data => {
+        
+                    if ( data.status === 200 ) {
+                        const res = await data.json()
+                        console.dir(res)
+                        alert('Your input has been deleted!')
+                    
+                    console.dir(data)
+                    }
+                })
+                .catch( error => {
+        
+                    e.target.outerHTML = 'error'
+        
+                    console.dir(error)
+                })
+
+        });
         
 
 
