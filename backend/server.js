@@ -41,7 +41,7 @@ app.delete('/', (request, response, next) => {
     
     jsonData = jsonData.filter(d => d.title != title)
     
-    fs.rm(`${dataLocation}data.json`, /*JSON.stringify(jsonData),*/ (error) => {
+    fs.rm(`${dataLocation}jsonData`, /*JSON.stringify(jsonData),*/ (error) => {
 
         if (error) {
 
@@ -126,7 +126,7 @@ app.post("/", (req, res) => {
 });
 
 
-app.delete('/images-delete', (req, res) => {
+/*app.delete('/images-delete', (req, res) => {
     const title = req.params.title
     //get the existing userdata
     const images = getUserData()
@@ -139,7 +139,7 @@ app.delete('/images-delete', (req, res) => {
     saveUserData(filterImages)
     res.send({success: true, msg: 'User removed successfully'})
     
-})
+})*/
 
 app.listen(port, () => {
 
